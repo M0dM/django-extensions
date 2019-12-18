@@ -76,7 +76,7 @@ class Command(BaseCommand):
                             help='Do not run in multithreaded mode.')
         parser.add_argument('--threaded', action='store_true', dest='threaded',
                             help='Run in multithreaded mode.')
-        parser.add_argument('--processes', action='store_true', dest='processes',
+        parser.add_argument('--processes', action="store", type=int, dest='processes',
                             default=1, help='Run on many processes')
         parser.add_argument('--output', dest='output_file', default=None,
                             help='Specifies an output file to send a copy of all messages (not flushed immediately).')
